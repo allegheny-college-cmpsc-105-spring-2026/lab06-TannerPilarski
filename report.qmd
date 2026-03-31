@@ -2,28 +2,34 @@
 title: Report
 ---
 
-TODO: Write your report in this `report.qmd` file using markdown syntax.
+Write your report in this `report.qmd` file using markdown syntax.
 
 ## What this was lab about
 
-TODO: Briefly summarize what this lab was about and what you did at a high level.
+Briefly summarize what this lab was about and what you did at a high level.
+- In this lab, I analyzed data from both Google Forms and Google Analytics to make plots of the answers my classmates gave on the form and the activity that was tracked on my website as my classmates filled out the form.
 
 ## Methods
 
-TODO: Briefly talk about the methods you used to gather the data and any specific functions that helped reveal the patterns.
+Briefly talk about the methods you used to gather the data and any specific functions that helped reveal the patterns.
+- To gather my data, I exported the Google Form responses to a Google Sheets file that I later downloaded as a .csv file. I also went to my Google Analytics page and downloaded the 'page and screens' data as a .csv file. From here, I uploaded these files to a Google Colab file where I broke them down using data filtering and display techniques we have seen in class. For the Google Analytics data, I found using booleans to remove string data and the pd.to_numeric() function helpful in filtering the data on the number of views per page down to just the numbers. For the survey data, I followed some of the suggestions given by Google Colab to make my pie charts (see https://colab.research.google.com/drive/11Gd3rmm7TR-ugw4blV6RRko-zf-d6fmF#scrollTo=a7voqDZonnxg). In particular, the axes[].pie and axes[].set-title were very useful in designing my pie charts. I also used a for loop to match up the color data with the colors on the pie chart so that the text on my pie chart would match the color it was representing.
 
 ## Findings
 
-TODO: Briefly restate what you found out about your classmates by exploring the data. 
+Briefly restate what you found out about your classmates by exploring the data. 
+- From the survey data (see Figures 2 and 3 in my colab file), I found that 25% of my classmates like Green, Yellow, or Red, and 12.5% of them like Blue or Purple (Figure 2). I also found that 75% prefer Summer over the other seasons and 25% prefer Fall (Figure 3).
 
-TODO: Briefly restate what your found out about your site usage by exploring the Google Analytics Data.
+Briefly restate what your found out about your site usage by exploring the Google Analytics Data.
+- After looking at the pages and screens data from my Google Analytics data, I found that the Questionnare page got viewed the most by visitors of my site followed by the Data Anlytics Lab page, the Data page, the Analytics page, and finally the Report page (Figure 1). This makes sense, since most people who were going to my site were my classmates who were looking to fill out the questionnare.
 
 Please refer to the figures you made in the notebook by title. For example, "As shown in figure 1..."
 
 ## Discussion
 
-TODO: Briefly mention how data gathering can help you answer specific questions.
+Briefly mention how data gathering can help you answer specific questions.
+- By gathering your own data, you get to control the questions you ask (perhaps through a survey like we did here) and the methods you use to get the data (like tracking website activity with Google Analytics). This way, you are able to get the exact kinds of data you want to analyze to answer your questions.
 
 ## Future directions
 
-TODO: Briefly state what could be explored within the data in the future, building on what you already did. Your answer must be something that you could actually do with the data, related to this lab.
+Briefly state what could be explored within the data in the future, building on what you already did. Your answer must be something that you could actually do with the data, related to this lab.
+- I could have combined the two data sets using the timestamp data (from the survey) and active user data (from Google Analytics) to see if there's a correlation in site activity and number of survey responses.
